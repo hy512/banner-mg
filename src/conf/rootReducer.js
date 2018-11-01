@@ -1,11 +1,11 @@
 
+import { combineReducers } from 'redux';
 
-import { handleActions } from 'redux-actions';
+import { imgs, visible, discard } from '../services/reducer';
 
-import {imgs, visible, discard} from '../services/reducer';
 
-export const reducer = handleActions(new Map([
+export const reducer = combineReducers({
     imgs,
     visible,
     discard
-]), null);
+});

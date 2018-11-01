@@ -1,0 +1,9 @@
+.x-upload-root {
+    display: flex;
+}
+
+.x-upload-root > div {
+    width: auto;
+    margin: 15px;
+    display: flex;
+}

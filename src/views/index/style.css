@@ -5,4 +5,15 @@
 
 .banner {
     width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;   
+}
+
+.banner > div {
+
+}  
+
+.banner img {
+    height: 280px;
 }

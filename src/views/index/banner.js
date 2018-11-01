@@ -1,14 +1,14 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import {Visible} from '../../services';
-import "./banner.js";
+import { Visible } from '../../services';
 
 // imgsF
-export @connect(({ visible }) => ({ visible }))  class Banner extends React.Component {
-  constructor(props) {
-      super(props);
-      Visible.instance().retrieve();
-  }
+
+class OBanner extends React.Component {
+    constructor(props) {
+        super(props);
+        Visible.instance().retrieve();
+    }
     render() {
         let imgs = this.props.visible;
         return (
@@ -19,13 +19,15 @@ export @connect(({ visible }) => ({ visible }))  class Banner extends React.Comp
         );
     }
 }
+export const Banner = connect(state => ({ visible: state.visible }))(OBanner);
 
 // src
 function Image(props) {
     let src = props.src;
     return (
         <div>
-            <image src={src} />
+            <img src={src} />
         </div>
     );
 }
+
