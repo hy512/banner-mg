@@ -4,18 +4,22 @@ import { createActions } from 'redux-actions';
 
 export const {
     imgs: {
-        replace: imgsRplc
+        replace: imgsRplc,
+        remove: imgsRmv
     },
     visible: {
-        replace: visibleRplc
+        replace: visibleRplc,
+        toggle: visibleTgl
     },
     discard: discardRplc
 } = createActions({
     Imgs: {
-        Replace: null
+        Replace: null,
+        Remove: null
     },
     Visible: {
-        Replace: null
+        Replace: null,
+        Toggle: null
     },
     Discard: {
         Replace: null

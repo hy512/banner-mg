@@ -1,9 +1,20 @@
 .x-upload-root {
     display: flex;
+    flex-direction: column;
+    justify-content: stretch;
 }
 
 .x-upload-root > div {
     width: auto;
     margin: 15px;
     display: flex;
+    flex-direction: row;
+    /* width: 100%; */
+    flex-wrap: wrap;
+}
+.x-upload-root > div:last-child {
+    justify-content: space-between;
+}
+.x-upload-root > div .btn {
+    margin-right: 1.5rem;
 }

@@ -12,6 +12,8 @@ export class Nav extends React.Component {
                 { to: "/upload", text: "添加" }
             ]
         };
+        let hash = window.location.hash.substring(1);
+        this.state.active = this.state.tabs.map(i=>i.to).indexOf(hash);
     }
     switch(index) {
         this.setState({active: index});
